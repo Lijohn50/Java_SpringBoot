@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineList | Modern Movie Watchlist</title>
+    <link rel="stylesheet" href="movie-app.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Cine<span>List</span></h1>
+            <p>Track your cinematic journey</p>
+        </header>
+
+        <section class="movie-form-card">
+            <form id="movieForm">
+                <div class="input-group">
+                    <input type="text" id="title" placeholder="Movie Title" required>
+                    <input type="text" id="director" placeholder="Director" required>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="genre" placeholder="Genre (e.g. Sci-Fi, Drama)" required>
+                    <input type="number" id="releaseYear" placeholder="Release Year" min="1888" max="2030" required>
+                    <button type="submit" class="btn-primary">Add to List</button>
+                </div>
+            </form>
+        </section>
+
+        <main>
+            <div class="filter-bar">
+                <h2>Your Watchlist</h2>
+                <div id="stats">Total: 0</div>
+            </div>
+            <div id="movieGrid" class="movie-grid">
+                <div class="loader">Waiting for backend...</div>
+            </div>
+        </main>
+    </div>
+    <script src="movie-app.js"></script>
+</body>
+</html>
