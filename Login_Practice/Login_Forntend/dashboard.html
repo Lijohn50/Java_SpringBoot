@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Modern Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dashboard-body">
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">TaskMaster</div>
+            <nav class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active">
+                        <i class="fas fa-th-large mr-10"></i> Dashboard
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-tasks mr-10"></i> My Tasks
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-users mr-10"></i> Team
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-cog mr-10"></i> Settings
+                    </a>
+                </li>
+            </nav>
+            <div class="nav-item">
+                <a href="index.html" class="nav-link" style="color: #ff4444;">
+                    <i class="fas fa-sign-out-alt mr-10"></i> Logout
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="header">
+                <div>
+                    <h1>Welcome, <span id="userNameDisplay">User</span>!</h1>
+                    <p class="subtitle">Here's what's happening with your projects today.</p>
+                </div>
+                <div class="user-profile">
+                    <div class="avatar">JD</div>
+                    <span>John Doe</span>
+                </div>
+            </header>
+
+            <!-- Stats -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-label">Pending Tasks</div>
+                    <div class="stat-value">12</div>
+                    <div style="color: var(--accent-orange);">+3 from yesterday</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Completed</div>
+                    <div class="stat-value">48</div>
+                    <div style="color: #4CAF50;">85% productivity</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Active Projects</div>
+                    <div class="stat-value">4</div>
+                    <div style="color: var(--primary-light);">2 deadlines today</div>
+                </div>
+            </div>
+
+            <!-- Recent Activity and Tasks Section -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+                <!-- Task List -->
+                <div class="recent-activity">
+                    <h2 style="margin-bottom: 20px;">Current Tasks</h2>
+                    <div id="taskList">
+                        <div class="activity-item">
+                            <div class="activity-icon"><i class="fas fa-list-check"></i></div>
+                            <div style="flex-grow: 1;">
+                                <div style="font-weight: 500;">Design New Website Header</div>
+                                <div style="font-size: 0.8rem; color: var(--text-muted);">Due: Mar 10, 2026</div>
+                            </div>
+                            <button class="button" style="padding: 8px 15px; font-size: 0.8rem; margin: 0;">Done</button>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon"><i class="fas fa-list-check"></i></div>
+                            <div style="flex-grow: 1;">
+                                <div style="font-weight: 500;">Database Migration</div>
+                                <div style="font-size: 0.8rem; color: var(--text-muted);">Due: Mar 12, 2026</div>
+                            </div>
+                            <button class="button" style="padding: 8px 15px; font-size: 0.8rem; margin: 0;">Done</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add Task Form -->
+                <div class="recent-activity">
+                    <h2 style="margin-bottom: 20px;">Add New Task</h2>
+                    <form class="form" id="addTaskForm">
+                        <div class="input-group">
+                            <input type="text" placeholder="Task Name" class="input" required>
+                        </div>
+                        <div class="input-group">
+                            <input type="date" class="input" required>
+                        </div>
+                        <button type="submit" class="button">Add Task</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
