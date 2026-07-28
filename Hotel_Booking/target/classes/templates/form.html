@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Person Registration</title>
+
+  <style>
+    body{
+      font-family: Arial, sans-serif;
+      background:#f4f4f4;
+    }
+
+    .container{
+      width:350px;
+      margin:50px auto;
+      background:#fff;
+      padding:20px;
+      border-radius:8px;
+      box-shadow:0 0 8px rgba(0,0,0,.2);
+    }
+
+    h2{
+      text-align:center;
+      margin-bottom:20px;
+    }
+
+    label{
+      display:block;
+      margin-top:10px;
+      font-weight:bold;
+    }
+
+    input{
+      width:100%;
+      padding:8px;
+      margin-top:5px;
+      border:1px solid #ccc;
+      border-radius:4px;
+      box-sizing:border-box;
+    }
+
+    button{
+      width:100%;
+      padding:10px;
+      margin-top:20px;
+      background:#007bff;
+      color:white;
+      border:none;
+      border-radius:4px;
+      cursor:pointer;
+    }
+
+    button:hover{
+      background:#0056b3;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Person Details</h2>
+
+  <form action="/savePerson" method="post">
+
+    <label>Name</label>
+    <input type="text" name="name" required>
+
+    <label>Email</label>
+    <input type="email" name="email" required>
+
+    <label>Mobile</label>
+    <input type="text" name="mobile" required>
+
+    <label>Passport Number</label>
+    <input type="number" name="passportInfo.passportNum" required>
+
+    <label>Expiry Date</label>
+    <input type="date" name="passportInfo.expiryDate" required>
+
+    <label>Country</label>
+    <input type="text" name="passportInfo.country" required>
+
+    <button type="submit">Save</button>
+
+  </form>
+</div>
+
+</body>
+</html>
